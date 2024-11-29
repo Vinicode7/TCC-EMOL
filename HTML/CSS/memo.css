@@ -1,0 +1,176 @@
+/* Corpo e texto */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #9e1b32 0%, #d3b228 100%); /* Vermelho e amarelo */
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ 
+/* Botão "Voltar" */
+button.voltar {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(68, 68, 68, 0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+    z-index: 10;
+}
+
+/* Sombra e efeitos de hover */
+button.voltar:hover {
+    background: #9e1b32;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Aparece apenas ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    width: 50%;
+    max-width: 700px;
+    animation: fadeIn 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 45px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Estilo para h2 dentro de #ListaDisplay */
+#listaDisplay h2 {
+    font-size: 22px;  /* Aumentei a fonte de 1.5rem para 1.8rem */
+    color: #ff5733;
+}
+
+/* Estilo para o campo de input */
+#inputArea {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+#inputArea label {
+    position: relative;
+    top: -15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    font-size: 1rem;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+/* Contêiner para os botões */
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #c92727, #d8701b);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background: linear-gradient(45deg, #c92727, #d8701b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito de clique nos botões */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Ajuste no estilo do resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    /* O fundo foi removido */
+    box-shadow: none;
+}
+
+/* Estilos para mensagens de vitória e derrota */
+.mensagemParabens {
+    color: #28a745; /* Verde para "Parabéns" */
+}
+
+.mensagemPerdeu {
+    color: #dc3545; /* Vermelho para "Infelizmente" */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+}

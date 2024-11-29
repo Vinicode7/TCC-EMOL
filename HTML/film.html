@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Filmes</title>
+    <link rel="stylesheet" href="CSS/film.css">
+</head>
+<body>
+    <header>
+        <h1>Recomendador de Filmes</h1>
+    </header>
+    <button class="voltar" onclick="window.location.href='index.html'">VOLTAR</button> 
+    <main class="container">
+       
+        <p class="instructions">Escolha um gênero para receber uma recomendação:</p>
+        <div class="button-group" id="botoes-generos">
+            <button onclick="recomendar_filme('terror')">TERROR</button>
+            <button onclick="recomendar_filme('comédia')">COMÉDIA</button>
+            <button onclick="recomendar_filme('ação')">AÇÃO</button>
+            <button onclick="recomendar_filme('romance')">ROMANCE</button>
+            <button onclick="recomendar_filme('animação')">ANIMAÇÃO</button>
+        </div>
+        <p id="resultado"></p>
+    </main>
+    <script src="JavaScript/film.js"></script>
+</body>
+</html>

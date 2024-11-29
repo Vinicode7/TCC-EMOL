@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada - Jarvis Mark 01</title>
+    <link rel="stylesheet" href="CSS/entrada.css">
+</head>
+<body>
+    <!-- Tela de carregamento -->
+    <div id="loading-screen">
+        <div class="loading-text">
+            <p>Inicializando sistema...</p>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página de Entrada -->
+    <div class="entrada-container" style="display: none;">
+        <div class="apresentacao">
+            <h1 id="mensagem">Prazer, me chamo...</h1>
+        </div>
+        <button id="botao-experiencia" style="display: none;" onclick="irParaIndex()">?...</button>
+    </div>
+
+    <script>
+        // Remove a tela de carregamento após um tempo
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                    document.querySelector('.entrada-container').style.display = 'block'; 
+                }, 1000);
+            }, 3000); 
+        };
+
+        // Função para alterar o texto após 3 segundos
+        setTimeout(() => {
+            document.getElementById("mensagem").textContent = "Prazer, me chamo...";
+            document.getElementById("botao-experiencia").style.display = "block"; 
+        }, 3000);
+
+        function irParaIndex() {
+            window.location.href = "index.html"; 
+        }
+    </script>
+</body>
+</html>

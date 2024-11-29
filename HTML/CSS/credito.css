@@ -1,0 +1,96 @@
+/* Estilo geral da página */
+body {
+    background-color: #000;
+    color: #f39c12;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Container principal */
+.credito-container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título */
+.titulo {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Texto */
+.texto {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+/* Botão de voltar */
+button.voltar {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(68, 68, 68, 0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 10;
+}
+
+button.voltar:hover {
+    background: #000000;
+    box-shadow: 0 5px 50px rgb(244, 159, 12);
+    transform: scale(1.05);
+}
+
+/* Container de fotos */
+.foto-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* Imagens */
+.foto-container img {
+    width: 600px; /* Ajuste a largura  */
+    height: 300px; /* Ajuste a altura  */
+    object-fit: cover; /* Mantém a proporção da imagem sem deformar */
+    border-radius: 60px;
+    margin-bottom: 60px; /* Espaçamento entre imagens */
+}

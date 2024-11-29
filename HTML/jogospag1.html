@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - Robosiuu</title>
+    <link rel="stylesheet" href="CSS/jogospag1.css"> <!-- Link para o CSS da página de jogos -->
+</head>
+<body>
+    <div class="back-button"> 
+        <button class="voltar" onclick="window.location.href='index.html'"><strong>VOLTAR</strong></button> 
+    </div>
+    <div class="container">
+        <h1>Escolha um Jogo:</h1>
+        <div class="caixinha">
+            <button id="jogo1" onclick="acaoBotao(1)">Jogo Memoria</button>
+            <button id="jogo2" onclick="acaoBotao(2)">Jogo Advinhacao</button>
+            <button id="jogo3" onclick="acaoBotao(3)">Jogo Forca</button>
+        </div>
+    </div>
+    <script>
+        function acaoBotao(botao) {
+            switch(botao) {
+                case 1:
+                    window.location.href = "memo.html"; 
+                    break;
+
+                case 2:
+                    window.location.href = "adv.html";
+                    break;
+
+                case 3:
+                    window.location.href = "forca.html"; 
+                    break;
+
+                default:
+                    alert('Botão não identificado');
+            }
+        }
+    </script>
+</body>
+</html>

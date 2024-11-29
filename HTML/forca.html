@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="CSS/forca.css">
+</head>
+<body>
+    <button class="voltar" onclick="window.location.href='jogospag1.html'"><strong>VOLTAR</strong></button>
+
+    <div class="container">
+        <h1>Jogo da Forca</h1>
+        <p>Você tem 6 tentativas para adivinhar a palavra! Digite uma letra ou uma palavra completa.</p>
+
+        <div id="boneco">
+            <pre>
+ +----+
+ |    |
+      |
+      |
+      |
+      |
+========</pre>
+        </div>
+
+        <div id="palavra">
+            <!-- A palavra será mostrada aqui -->
+        </div>
+
+        <div id="letras-erradas">
+            <p>Letras erradas: <span></span></p>
+        </div>
+
+        <div id="tentativas">
+            <p>Tentativas restantes: <span>6</span></p>
+        </div>
+
+        <div id="mensagem">
+            <!-- Mensagem de feedback para acertos/erros -->
+        </div>
+
+        <div id="input">
+            <input type="text" id="palavra-input" placeholder="Digite uma letra ou palavra" />
+            <button onclick="verificarEntrada()">Verificar</button>
+        </div>
+
+        <button id="reiniciar" onclick="reiniciarJogo()" style="display:none;">Jogar Novamente</button>
+
+        <div class="back-button">
+        </div>
+    </div>
+
+    <script src="JavaScript/forca.js"></script>
+</body>
+</html>

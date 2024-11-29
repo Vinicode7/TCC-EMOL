@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Adivinhação</title>
+    <link rel="stylesheet" href="CSS/adv.css">
+</head>
+<body>
+    <button class="voltar" onclick="window.location.href='jogospag1.html'"><strong>VOLTAR</strong></button>
+    <div class="container">
+        <h1>Jogo da Adivinhação</h1>
+        <p>Você tem 3 tentativas para adivinhar o número secreto entre 1 e 20!</p>
+
+        <div class="jogo">
+            <input type="number" id="chute" placeholder="Digite um número entre 1 e 20" />
+            <button onclick="verificarChute()">Verificar</button>
+        </div>
+
+        <p id="mensagem"></p>
+        <button id="reiniciar" onclick="reiniciarJogo()" style="display:none;">Jogar Novamente</button>
+    </div>
+
+    <script src="JavaScript/adv.js"></script>
+</body>
+</html>

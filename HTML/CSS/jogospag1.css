@@ -1,0 +1,193 @@
+/* Definindo a fonte e o layout geral da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #9e1b32, #f39c12); /* Fundo com gradiente */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a altura total da tela */
+    transition: background-color 0.5s ease; /* Transição suave para mudanças de fundo */
+    position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+}
+
+/* Estilo para o botão de voltar */
+button.voltar {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(68, 68, 68, 0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 10;
+}
+
+button.voltar:hover {
+    background: #9e1b32;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Container centralizando o conteúdo */
+.container {
+    text-align: center;
+    padding: 60px;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra mais forte para efeito de profundidade */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    width: 50%; /* Tamanho do container */
+    max-width: 700px; /* Largura máxima */
+    animation: fadeIn 1s ease-in-out; /* Animação de entrada */
+    position: relative; /* Permite posicionamento absoluto */
+    overflow: hidden; /* Esconde o conteúdo excedente */
+    z-index: 1;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para o título */
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff; 
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    font-size: 45px; /* Tamanho da fonte */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+button.voltar {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(68, 68, 68, 0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 10;
+    box-shadow: none;
+
+}
+
+button.voltar:hover {
+    background: #9e1b32;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Estilo para os botões */
+button {
+    width: 200px; /* Largura fixa para os botões */
+    padding: 15px; /* Padding ajustado */
+    margin: 10px auto; /* Margin ajustado para centralizar */
+    display: block; /* Torna o botão um bloco para ocupar a largura total */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px; /* Bordas totalmente arredondadas */
+    background: linear-gradient(45deg, #c92727, #d8701b); /* Gradiente de fundo */
+    color: white;
+    position: relative; /* Permite pseudo-elementos */
+    overflow: hidden; /* Esconde o conteúdo excedente */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    font-size: 18px;
+}
+
+/* Efeito de hover nos botões */
+button:hover {
+    background: linear-gradient(45deg, #c92727, #d8701b); /* Gradiente de fundo mais escuro no hover */
+    transform: translateY(-3px); /* Move o botão ligeiramente para cima no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra mais pronunciada no hover */
+    
+}
+
+/* Efeito de clique nos botões */
+button:active {
+    transform: translateY(1px); /* Reduz ligeiramente o botão quando clicado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduz a sombra no clique */
+}
+
+/* Efeito de foco nos botões */
+button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: none; 
+}
+
+/* Efeito visual com pseudo-elementos */
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Efeito adicional de gradiente animado */
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ;
+    opacity: 0;
+}
+
+button:hover::after {
+    opacity: 1;
+    animation: gradient-move 1.5s linear infinite; /* Animação de gradiente */
+}
+
+@keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Estilo para os botões quando desabilitados */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none; /* Remove a sombra nos botões desabilitados */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+
+    button {
+        width: 100%; /* Largura total para telas menores */
+        padding: 12px 0; /* Ajuste de padding para telas pequenas */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+}

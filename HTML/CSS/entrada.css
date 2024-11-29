@@ -1,0 +1,121 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000000, #000000); /* Fundo futurista */
+    color: #f39c12; /* Amarelo vibrante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Tela de carregamento */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10; /* Fica acima do conteúdo */
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* Texto de carregamento */
+.loading-text {
+    color: #f39c12;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Barra de carregamento */
+.loading-bar {
+    width: 80%;
+    height: 8px;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 50%; /* Progresso inicial */
+    height: 100%;
+    background-color: #f39c12;
+    animation: progressAnimation 3s ease-in-out forwards; /* Animação da barra de progresso */
+}
+
+/* Animação da barra de progresso */
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Estilos da página de entrada */
+.entrada-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.5s ease-in-out; /* Animação de entrada */
+    display: none; /* Inicialmente escondido até o carregamento */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para o texto */
+.apresentacao h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
+    animation: pulse 1s infinite;
+}
+
+/* Botão "Experiência" */
+#botao-experiencia {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9e1b32, #f39c12);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: none; /* Oculto inicialmente */
+    margin-left: 130px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão hover */
+#botao-experiencia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão ativo */
+#botao-experiencia:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

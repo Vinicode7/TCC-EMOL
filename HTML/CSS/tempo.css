@@ -1,0 +1,163 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(135deg, #9e1b32 0%, #d3b228 100%); /* Vermelho e dourado */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Botão Voltar no canto superior esquerdo */
+button.voltar {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background: rgba(68, 68, 68, 0);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    z-index: 10;
+}
+
+button.voltar:hover {
+    background: #9e1b32;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+/* Container Central */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    box-shadow: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #9e1b32, #d3b228); /* Vermelho e dourado */
+    margin-top: 30px; /* Diminui a margem superior para mover o conteúdo para cima */
+    margin-bottom: 50px;
+}
+
+/* Estilo para o label */
+label {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d3b228; /* Dourado */
+    display: block;
+}
+
+/* Campo de input */
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Botão Consultar Clima */
+button.consultar {
+    background-color: #d3b228;
+    background-image: linear-gradient(45deg, #d3b228 0%, #d3b228 100%);
+    background-size: 200% 100%;
+    background-position: left center;
+    color: #9e1b32; /* Vermelho */
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 300px;
+    transition: background-color 0.3s;
+    box-shadow: none;
+}
+
+button.consultar:hover {
+    background-color: #ffecb3;
+}
+
+/* Estilo adicional para o restante */
+.weather-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra mais forte para efeito de profundidade */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: none;
+}
+
+.city-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d3b228; /* Dourado */
+}
+
+.weather-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #d3b228; /* Dourado */
+}
+
+.temperature {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #d3b228; /* Dourado */
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #d3b228; /* Dourado */
+}
+
+.extra-info {
+    font-size: 16px;
+    color: #dcdcdc;
+}
+
+.extra-info span {
+    display: block;
+    margin: 5px 0;
+    color: #d3b228; /* Dourado */
+}
+
+/* Emoji de clima */
+#weather-emoji {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

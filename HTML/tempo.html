@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Simples</title>
+    <link rel="stylesheet" href="CSS/tempo.css">
+</head>
+<body>
+    <div class="back-button">
+        <button class="voltar" onclick="window.location.href='index.html'">VOLTAR</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Consulta de Clima</h1>
+        </header>
+        <main>
+            <div class="form">
+                <label for="cidade">Digite o Nome da Cidade:</label>
+                <input type="text" id="cidade" placeholder="Ex: São Paulo">
+                <button class="consultar" onclick="buscarClima()">Consultar Clima</button>
+            </div>
+
+            <!-- Mensagem de erro que aparecerá caso o nome da cidade não seja preenchido -->
+            <div id="mensagem-erro" style="display: none; color: #9e1b32; font-size: 18px; background: rgba(0, 0, 0, 0.7); padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                Por favor, insira o nome de uma cidade.
+            </div>
+
+            <div id="resultado" class="resultado">
+                <div class="weather-container">
+                    <div class="city-name">Cidade: <span id="city-name">São Paulo</span></div>
+                    <div class="weather-icon">
+                        <span id="weather-emoji">🌤️</span>
+                    </div>
+                    <div class="temperature">
+                        <span id="temp">22°C</span>
+                    </div>
+                    <div class="description">
+                        <span id="weather-description">Parcialmente Nublado</span>
+                    </div>
+                    <div class="extra-info">
+                        <span>Humidade: <span id="humidity">60%</span></span>
+                        <span>Vento: <span id="wind-speed">15 km/h</span></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="JavaScript/tempo.js"></script>
+</body>
+</html>

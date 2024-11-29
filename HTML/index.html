@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-Vindo ao Jarvis Mark 01!</title>
+    <link rel="stylesheet" href="CSS/index.css"> 
+</head>
+<body>
+
+    <!-- Conteúdo principal -->
+    <div class="container">
+        <h1 id="nome">Jarvis Mark 01!</h1>
+        <button id="botao1" onclick="acaoBotao(1)" aria-label="Jogos">Jogos</button> 
+        <button id="botao2" onclick="acaoBotao(2)" aria-label="Calculadora">Calculadora</button>
+        <button id="botao3" onclick="acaoBotao(3)" aria-label="Filme Surpresa">Filme Surpresa</button>
+        <button id="botao4" onclick="acaoBotao(4)" aria-label="Clima">Clima</button>
+        <button id="botao5" onclick="acaoBotao(5)" aria-label="Creditos">Creditos</button>
+    </div>
+
+    <!-- Robo animado -->
+    <img src="images/robot.png" id="robot" alt="Robot" class="robot-animation">
+
+    <script>
+        function acaoBotao(botao) {
+            switch(botao) {
+                case 1:
+                    window.location.href = "jogospag1.html"; 
+                    break;
+                case 2:
+                    window.location.href = "calc.html"; 
+                    break;
+                case 3:
+                    window.location.href = "film.html"; 
+                    break;
+                case 4:
+                    window.location.href = "tempo.html";
+                    break;
+                case 5:
+                    window.location.href = "credito.html";
+                    break;
+                default:
+                    alert('Botão não identificado');
+            }
+        }
+    </script>
+</body>
+</html>
