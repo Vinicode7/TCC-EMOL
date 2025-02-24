@@ -67,3 +67,7 @@ var numeroSecreto = Math.floor(Math.random() * 20) + 1;
             document.getElementById('mensagem').innerText = '';
             document.getElementById('reiniciar').style.display = 'none';
         }
+
+        function (){
+            alert('eu sou lindo')
+        }
