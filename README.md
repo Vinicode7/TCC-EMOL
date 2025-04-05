@@ -1,1 +1,6 @@
-esse é o projeto do vini
+primeiro projeto TCC da Escola Monteiro Lobato
+-Vinicius 
+-Thayane
+-Guilherme 
+-Davi
+-Bernardo
